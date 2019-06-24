@@ -6,8 +6,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
@@ -19,9 +17,7 @@ public class RedisApplicationTests {
 
     @Test
     public void test()  {
-        Dog dog = new Dog();
-        dog.setColor("红色");
-        dog.setName("小花狗");
+        Dog dog = new Dog(1,"小花");
 
         redisUtils.setObj("bbb",dog);
 
