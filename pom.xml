@@ -74,11 +74,17 @@
          </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/com.ctrip.framework.apollo/apollo-client -->
+        <!--<dependency>-->
+            <!--<groupId>com.ctrip.framework.apollo</groupId>-->
+            <!--<artifactId>apollo-client</artifactId>-->
+            <!--<version>1.4.0</version>-->
+        <!--</dependency>-->
+
         <dependency>
-            <groupId>com.ctrip.framework.apollo</groupId>
-            <artifactId>apollo-client</artifactId>
-            <version>1.4.0</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
+
     </dependencies>
 
     <build>

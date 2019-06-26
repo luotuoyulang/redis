@@ -1,5 +1,5 @@
-#server:
-#  port: 8080
+server:
+  port: 9000
 
 spring:
   application:
@@ -48,6 +48,27 @@ spring:
         login-username: admin
         login-password: 123
 
+  rabbitmq:
+    host: 188.131.147.130
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      concurrency: 10
+      max-concurrency: 20
+      prefetch: 50
+
+
+imps:
+  record:
+    exchange:
+      name: record:exchange
+    order:
+      key:
+        name: record:order:key
+      queue:
+        name: record:order:queue
+
   #激活dev 配置文件
   profiles:
     active: dev
@@ -57,13 +78,5 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml   #配置Mapper.xml文件所在路径
   type-aliases-package: cn.luotuoyulang.redis.entity   #配置别名
 
-
-
-# 应用ID(在Apollo服务端新增项目添加的应用ID)
-app:
-  id: 10010
-# apollo-configservice地址
-apollo:
-  meta: http://188.131.147.130:8080/
 
 
